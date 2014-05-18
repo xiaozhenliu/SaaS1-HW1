@@ -26,4 +26,5 @@ class JellyBean < Dessert
   def delicious?
     return false if @flavor = "licorice"
     return true
+    end
 end
