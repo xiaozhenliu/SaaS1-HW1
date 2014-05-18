@@ -10,9 +10,10 @@ module FunWithStrings
   end
   def anagram_groups
     agMap = Hash.new
-    agGroup = Hash.new([])
+    agGroup = Hash.new
     self.split.each {|word| agMap[word] = word.downcase.chars.sort.join}
-    agMap.map {|k,v| agGroup[v]=agGroup[v].push(k)}
+    agMap.values.each{|v| agGroup[v]=[]}
+    agMap.each {|k,v| agGroup[v].push(k)}
     return agGroup.values
   end
 end
