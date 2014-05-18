@@ -17,9 +17,8 @@ end
 
 class JellyBean < Dessert
   attr_accessor :flavor
-    
+  super 
   def initialize(flavor)
-    super(@name)
     @flavor = flavor
     @name = @name << " jelly bean"
     @calories = 5
