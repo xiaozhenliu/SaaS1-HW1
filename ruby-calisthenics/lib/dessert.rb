@@ -20,7 +20,7 @@ class JellyBean < Dessert
 
   def initialize(flavor)
     @flavor = flavor
-    @name = @name + " jelly bean"
+    @name = @name << " jelly bean"
     @calories = 5
   end
   
