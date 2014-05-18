@@ -5,6 +5,7 @@ module FunWithStrings
   def count_words
     count = Hash.new(0)
     self.downcase.split.each {|word| count[word.gsub(/\W/,"")] +=1 }
+    count.delete("") if count.has_key?("")
     return count
   end
   def anagram_groups
