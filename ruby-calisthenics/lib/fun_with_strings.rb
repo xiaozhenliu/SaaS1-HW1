@@ -12,7 +12,7 @@ module FunWithStrings
     agMap = Hash.new
     agGroup = Hash.new([])
     self.split.each {|word| agMap[word] = word.downcase.chars.sort.join}
-    agMap.map {|k,v| g[v]=g[v].push(k)}
+    agMap.map {|k,v| agGroup[v]=agGroup[v].push(k)}
     return agGroup.values
   end
 end
