@@ -23,7 +23,7 @@ class JellyBean < Dessert
   end
   
   def delicious?
-    return false if @flavor == "licorice"
+    return false if @name == "licorice"<<" jelly bean"
     return true
     end
 end
