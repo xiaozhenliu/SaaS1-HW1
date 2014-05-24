@@ -19,7 +19,15 @@ class RockPaperScissors
   end
 
   def self.tournament_winner(tournament)
-    # YOUR CODE HERE
+    #figure out how many player pairs are there
+    r = tournament.flatten.length/2  #each player has 2 element in the array
+    n = log2(r)
+    #find the winner if there is only one pair
+    if n == 1
+        return winner(tournament[0],tournament[1])
+    #recursive
+    else
+        return tournament.tornament_winner(tournament[0],tournament[1])
   end
 
 end
